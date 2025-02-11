@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: jakejarvis/s3-sync-action@v0.6.0  # Use the latest stable version
+    - uses: jakejarvis/s3-sync-action@v0.5.1  # Use the latest stable version
 
       with:
         args: --acl public-read --follow-symlinks --delete
