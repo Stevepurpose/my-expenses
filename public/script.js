@@ -8,20 +8,16 @@ let credit_score = document.getElementById("credit")
 let debit_score = document.getElementById("debit")
 let span = document.querySelector("span")
 
-function generate_id(){
-    let count = transactions.length
-    return count
-}
 
-let get_id = generate_id() 
-let transactionID = get_id + 1
 
 
 
 myButton.addEventListener("click", setTransactions)
 function setTransactions(){
     let amount_num = parseFloat(cost.value)
-
+    let count = transactions.length
+    let transactionID = count + 1
+    
     let latest_transaction = {
         id: transactionID,
         purpose: reason.value,
@@ -43,7 +39,7 @@ function display_transctions(){
 
 let my_array = transactions.map((transaction)=>{
 let abs_val = Math.abs(transaction.amount)
-return `${transaction.purpose} +$${abs_val}`
+return `Transaction ID: ${transaction.id}  Purpose: ${transaction.purpose}  Amount: +$${abs_val}`
 })
 
 my_array.forEach((transaction)=>{
@@ -59,7 +55,7 @@ function display_balance(){
     return acc += transaction.amount
  }, 0)
 
-balance_show.innerHTML= balance
+balance_show.innerHTML= "$" + balance
 }
 
 function credit_record(){

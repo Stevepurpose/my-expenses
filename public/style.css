@@ -6,7 +6,7 @@ body{
     margin:0;
     background-color: blue;
     color: white;
-
+    font-family: sans-serif ;
 }
 
 header{
@@ -28,8 +28,10 @@ header{
     display: flex;
 }
 
+
+
 .balance{
-display: grid;
+   display: grid;
    margin: auto;
    justify-content: center;
 }
@@ -38,6 +40,11 @@ display: grid;
     display: grid;
     margin: auto;
     justify-content: center;
+    
+}
+
+.transaction_header{
+    margin: auto;
 }
 
 .record_transaction{
@@ -51,6 +58,7 @@ input{
     padding: 1.5rem;
     color: red;
     box-shadow: 0.1rem 0.1rem 0.5rem  black;
+    font-size: larger;
 }
 
 
