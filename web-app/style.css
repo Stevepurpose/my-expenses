@@ -1,0 +1,11 @@
+
+.cash_flow{
+    display: flex;
+    border: 1px solid blue;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.credit_case .debit_case{
+    display: flex;
+}
